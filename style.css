@@ -1,0 +1,148 @@
+.wrapper {
+    width:250px;
+    height:600px;
+    margin:0 auto;
+}
+.menu {
+    height:50px; 
+    margin:0;         
+    padding:0;
+    list-style:none
+}
+.menu li {                
+    float:left;
+    height:20px;
+    margin-left:14px;
+    padding:14px;
+    text-align:center;
+    border:1px solid #c6c1c1;
+    cursor: pointer;
+    box-shadow:0 0 2px 2px;
+}
+.point_menu {
+    height:30px;
+}
+.point_menu span {
+    display:inline-block;
+    height:30px;
+    line-height: 30px;
+    float:right;
+}
+.game_field {
+    border:solid 1px black;     
+    border-collapse:separate;
+}
+
+.game_field td {                
+    height:25px;
+    width:25px;                
+}
+.game_field tbody tr td {
+    height:25px;
+    width:25px;
+}
+.red {
+    background: red;
+    background:        -moz-linear-gradient(top, red 0%, #fdd1d1 100%);
+    background:            -webkit-gradient(linear, left top, left bottom, color-stop(0%,red), color-stop(100%,#fdd1d1));
+    background:     -webkit-linear-gradient(top, red 0%,#fdd1d1 100%);
+    background:          -o-linear-gradient(top, red 0%,#fdd1d1 100%);
+    background:         -ms-linear-gradient(top, red 0%,#fdd1d1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=red, endColorstr=#fdd1d1, GradientType=0 );
+    -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr='+red+', endColorstr='+#fdd1d1+')' ;
+    background: linear-gradient(top, red 0%,#fdd1d1 100%) // W3C            
+}                            
+.green {
+    background: green;
+    background:        -moz-linear-gradient(top, green 0%, #dafdd1 100%);
+    background:            -webkit-gradient(linear, left top, left bottom, color-stop(0%,green), color-stop(100%,#dafdd1));
+    background:     -webkit-linear-gradient(top, green 0%,#dafdd1 100%);
+    background:          -o-linear-gradient(top, green 0%,#dafdd1 100%);
+    background:         -ms-linear-gradient(top, green 0%,#dafdd1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=green, endColorstr=#dafdd1, GradientType=0 );
+    -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr='+green+', endColorstr='+#dafdd1+')' ;
+    background: linear-gradient(top, green 0%,#dafdd1 100%) // W3C    
+}
+.blue {
+    background: blue;
+    background:        -moz-linear-gradient(top, blue 0%, #d6d1fd 100%);
+    background:            -webkit-gradient(linear, left top, left bottom, color-stop(0%,blue), color-stop(100%,#d6d1fd));
+    background:     -webkit-linear-gradient(top, blue 0%,#d6d1fd 100%);
+    background:          -o-linear-gradient(top, blue 0%,#d6d1fd 100%);
+    background:         -ms-linear-gradient(top, blue 0%,#d6d1fd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=blue, endColorstr=#d6d1fd, GradientType=0 );
+    -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr='+blue+', endColorstr='+#d6d1fd+')' ;
+    background: linear-gradient(top, blue 0%,#d6d1fd 100%) // W3C  
+}
+.yellow {
+    background: yellow;
+    background:        -moz-linear-gradient(top, yellow 0%, #fdf2d1 100%);
+    background:            -webkit-gradient(linear, left top, left bottom, color-stop(0%,yellow), color-stop(100%,#fdf2d1));
+    background:     -webkit-linear-gradient(top, yellow 0%,#fdf2d1 100%);
+    background:          -o-linear-gradient(top, yellow 0%,#fdf2d1 100%);
+    background:         -ms-linear-gradient(top, yellow 0%,#fdf2d1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=yellow, endColorstr=#fdf2d1, GradientType=0 );
+    -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr='+yellow+', endColorstr='+#fdf2d1+')' ;
+    background: linear-gradient(top, yellow 0%,#fdf2d1 100%) // W3C  
+}
+
+/* CSS сообщения о конце игры */
+#box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+/* в нём находится полупрозрачный экран, на 20px меньше */
+#box-inner {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    bottom: 20px;
+    background: blue;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+/* форма находится не в экране, а рядом с ним, чтобы не быть полупрозрачной */
+#box-message {
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0; /* центрирование */
+    margin: auto;  /* центрирование */
+    height: 120px;
+    width: 300px;
+    border: 1px solid white;
+    background-color:white;                
+}
+
+#box-message #top {
+    height:68px;                
+    text-align:center;
+    background-color:red; 
+    font:16px Arial;  
+    /*color:#0074cc;*/
+    color:yellow;
+    padding:10px 0px 0px 0px;
+}
+
+#box-message #top span {
+    font:bold 20px Arial;                
+}
+
+#box-message #bottom {
+    height:42px;
+    text-align:center;
+    background-color: #e356c0;
+}
+
+#box-message #bottom span {
+    padding:10px 15px;
+    border-radius:25px;
+    border:solid 1px white;
+    background-color:yellow;
+    cursor: pointer;
+}
